@@ -242,7 +242,7 @@ function DeviantGestures() {
         React.createElement('div', { className: "relative z-10 max-w-2xl px-8 text-center" },
           React.createElement('h1', { className: "text-8xl font-bold mb-4", style: { fontFamily: 'Bebas Neue, sans-serif' } }, "DEVIANT GESTURES"),
           React.createElement('h2', { className: "text-2xl mb-8", style: { fontFamily: 'Bebas Neue, sans-serif' } }, "Gestural Drawing for the Beautifully Deviant"),
-          React.createElement('p', { className: "text-lg mb-12 leading-relaxed" }, "This is a timed figure drawing tool using BDSM-themed reference images. Choose a structured 30-minute class or set your own pace. Grab your sketchbook. Obey the timer - or not, you brat."),
+          React.createElement('p', { className: "text-lg mb-12 leading-relaxed" }, "This is a timed figure drawing tool using BDSM-themed reference images. Choose a structured 30-minute class or set your own pace. Grab your sketchbook. Obey the timer, or don't you brat."),
           React.createElement('div', { className: "flex gap-6 justify-center mb-16" },
             React.createElement('button', {
               onClick: startClassMode,
@@ -326,33 +326,33 @@ function DeviantGestures() {
           formatTime(timeRemaining)
         ),
 
-        React.createElement('div', { className: "absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-6 items-center bg-black/70 px-8 py-4 hover:opacity-100 opacity-60 transition-opacity" },
+        React.createElement('div', { className: "fixed bottom-4 right-4 flex gap-3 items-center bg-black/80 px-4 py-2 rounded hover:opacity-100 opacity-70 transition-opacity text-sm" },
           React.createElement('button', {
             onClick: previousImage,
             disabled: imageHistory.length <= 1,
-            className: "text-3xl disabled:opacity-30 hover:text-red-500 transition-colors",
+            className: "text-2xl disabled:opacity-30 hover:text-red-500 transition-colors",
             title: "Previous"
           }, "←"),
           
           React.createElement('button', {
             onClick: () => setIsPaused(!isPaused),
-            className: "text-2xl hover:text-red-500 transition-colors px-4",
+            className: "text-lg hover:text-red-500 transition-colors px-2",
             style: { fontFamily: 'Bebas Neue, sans-serif' }
           }, isPaused ? 'Resume' : 'Pause'),
           
           React.createElement('button', {
             onClick: nextImage,
-            className: "text-3xl hover:text-red-500 transition-colors",
+            className: "text-2xl hover:text-red-500 transition-colors",
             title: "Next"
           }, "→"),
           
-          React.createElement('div', { className: "text-lg mx-4 opacity-70" }, `${currentPose}/${totalPoses}`),
+          React.createElement('div', { className: "text-sm opacity-70" }, `${currentPose}/${totalPoses}`),
           
           React.createElement('button', {
             onClick: () => setScreen('welcome'),
-            className: "text-2xl hover:text-red-500 transition-colors",
+            className: "text-lg hover:text-red-500 transition-colors",
             style: { fontFamily: 'Bebas Neue, sans-serif' }
-          }, "End Session")
+          }, "Exit")
         )
       )
     );
