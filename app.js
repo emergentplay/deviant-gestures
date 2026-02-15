@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+const { useState, useEffect, useRef } = React;
 
 const IMAGE_LIBRARY = [
   "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/p1.jpg",
@@ -88,7 +88,7 @@ const formatTime = (seconds) => {
   return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 };
 
-export default function DeviantGestures() {
+function DeviantGestures() {
   const [screen, setScreen] = useState('welcome');
   const [mode, setMode] = useState(null);
   const [duration, setDuration] = useState(null);
@@ -223,112 +223,82 @@ export default function DeviantGestures() {
   }, [screen, isPaused, currentIndex, showPhaseTransition]);
 
   const Sigil = () => (
-    <img 
-      src="https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/sigil.jpg" 
-      alt="EmergentPlay Sigil"
-      className="absolute top-8 left-8 h-48 w-auto z-10"
-    />
+    React.createElement('img', {
+      src: "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/sigil.jpg",
+      alt: "EmergentPlay Sigil",
+      className: "absolute top-8 left-8 h-48 w-auto z-10"
+    })
   );
 
   if (screen === 'welcome') {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-        <Sigil />
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${getRandomImage()})` }}
-        />
-        <div className="relative z-10 max-w-2xl px-8 text-center">
-          <h1 className="text-8xl font-bold mb-4" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-            DEVIANT GESTURES
-          </h1>
-          <h2 className="text-2xl mb-8" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-            Gestural Drawing for the Beautifully Deviant
-          </h2>
-          <p className="text-lg mb-12 leading-relaxed">
-            This is a timed figure drawing tool using BDSM-themed reference images. 
-            Choose a structured 30-minute class or set your own pace. 
-            Grab your sketchbook. Obey the timer.
-          </p>
-          
-          <div className="flex gap-6 justify-center mb-16">
-            <button
-              onClick={startClassMode}
-              className="px-12 py-4 bg-red-700 hover:bg-red-600 text-white text-2xl font-bold transition-colors"
-              style={{ fontFamily: 'Bebas Neue, sans-serif' }}
-            >
-              30-Minute Class
-            </button>
-            <button
-              onClick={() => setScreen('freeSetup')}
-              className="px-12 py-4 bg-white hover:bg-gray-200 text-black text-2xl font-bold transition-colors"
-              style={{ fontFamily: 'Bebas Neue, sans-serif' }}
-            >
-              Free Practice
-            </button>
-          </div>
-
-          <div className="mb-8 border-t border-white/30 pt-8">
-            <h3 className="text-xl mb-3" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-              THE MUSE SURRENDER SERIES
-            </h3>
-            <p className="text-base leading-relaxed">
-              Want to surrender your form to art? I'm looking for muses — all bodies, all genders, 
-              all expressions of power and submission. DM EmergentPlay on FetLife to be part of the series.
-            </p>
-          </div>
-
-          <div className="text-sm opacity-70">
-            Questions, requests, worship — find EmergentPlay on FetLife.
-          </div>
-        </div>
-      </div>
+      React.createElement('div', { className: "min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden" },
+        React.createElement('link', { href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap", rel: "stylesheet" }),
+        React.createElement(Sigil),
+        React.createElement('div', {
+          className: "absolute inset-0 bg-cover bg-center opacity-20",
+          style: { backgroundImage: `url(${getRandomImage()})` }
+        }),
+        React.createElement('div', { className: "relative z-10 max-w-2xl px-8 text-center" },
+          React.createElement('h1', { className: "text-8xl font-bold mb-4", style: { fontFamily: 'Bebas Neue, sans-serif' } }, "DEVIANT GESTURES"),
+          React.createElement('h2', { className: "text-2xl mb-8", style: { fontFamily: 'Bebas Neue, sans-serif' } }, "Gestural Drawing for the Beautifully Deviant"),
+          React.createElement('p', { className: "text-lg mb-12 leading-relaxed" }, "This is a timed figure drawing tool using BDSM-themed reference images. Choose a structured 30-minute class or set your own pace. Grab your sketchbook. Obey the timer."),
+          React.createElement('div', { className: "flex gap-6 justify-center mb-16" },
+            React.createElement('button', {
+              onClick: startClassMode,
+              className: "px-12 py-4 bg-red-700 hover:bg-red-600 text-white text-2xl font-bold transition-colors",
+              style: { fontFamily: 'Bebas Neue, sans-serif' }
+            }, "30-Minute Class"),
+            React.createElement('button', {
+              onClick: () => setScreen('freeSetup'),
+              className: "px-12 py-4 bg-white hover:bg-gray-200 text-black text-2xl font-bold transition-colors",
+              style: { fontFamily: 'Bebas Neue, sans-serif' }
+            }, "Timed Practice")
+          ),
+          React.createElement('div', { className: "mb-8 border-t border-white/30 pt-8" },
+            React.createElement('h3', { className: "text-xl mb-3", style: { fontFamily: 'Bebas Neue, sans-serif' } }, "THE MUSE SURRENDER SERIES"),
+            React.createElement('p', { className: "text-base leading-relaxed" }, "Want to surrender your form to art? I'm looking for muses — all bodies, all genders, all expressions of power and submission. DM EmergentPlay on FetLife to be part of the series.")
+          ),
+          React.createElement('div', { className: "text-sm opacity-70" }, "Questions, requests, worship — find EmergentPlay on FetLife.")
+        )
+      )
     );
   }
 
   if (screen === 'freeSetup') {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-        <Sigil />
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${getRandomImage()})` }}
-        />
-        <div className="relative z-10 max-w-xl px-8 text-center">
-          <h1 className="text-6xl font-bold mb-8" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-            Choose Your Pace
-          </h1>
-          <p className="text-lg mb-12">
-            Select how long you want each pose to hold.
-          </p>
-          <div className="grid grid-cols-2 gap-4 mb-8">
-            {[
+      React.createElement('div', { className: "min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden" },
+        React.createElement('link', { href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap", rel: "stylesheet" }),
+        React.createElement(Sigil),
+        React.createElement('div', {
+          className: "absolute inset-0 bg-cover bg-center opacity-20",
+          style: { backgroundImage: `url(${getRandomImage()})` }
+        }),
+        React.createElement('div', { className: "relative z-10 max-w-xl px-8 text-center" },
+          React.createElement('h1', { className: "text-6xl font-bold mb-8", style: { fontFamily: 'Bebas Neue, sans-serif' } }, "Choose Your Pace"),
+          React.createElement('p', { className: "text-lg mb-12" }, "Select how long you want each pose to hold."),
+          React.createElement('div', { className: "grid grid-cols-2 gap-4 mb-8" },
+            [
               { label: '30 Seconds', value: 30 },
               { label: '1 Minute', value: 60 },
               { label: '2 Minutes', value: 120 },
               { label: '6 Minutes', value: 360 },
               { label: '10 Minutes', value: 600 }
-            ].map(({ label, value }) => (
-              <button
-                key={value}
-                onClick={() => startFreeMode(value)}
-                className="px-8 py-6 bg-white hover:bg-red-700 hover:text-white text-black text-xl font-bold transition-colors"
-                style={{ fontFamily: 'Bebas Neue, sans-serif' }}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-          <button
-            onClick={() => setScreen('welcome')}
-            className="text-white/70 hover:text-white underline"
-          >
-            Back
-          </button>
-        </div>
-      </div>
+            ].map(({ label, value }) =>
+              React.createElement('button', {
+                key: value,
+                onClick: () => startFreeMode(value),
+                className: "px-8 py-6 bg-white hover:bg-red-700 hover:text-white text-black text-xl font-bold transition-colors",
+                style: { fontFamily: 'Bebas Neue, sans-serif' }
+              }, label)
+            )
+          ),
+          React.createElement('button', {
+            onClick: () => setScreen('welcome'),
+            className: "text-white/70 hover:text-white underline"
+          }, "Back")
+        )
+      )
     );
   }
 
@@ -337,104 +307,87 @@ export default function DeviantGestures() {
     const currentPose = currentIndex + 1;
 
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-        <Sigil />
+      React.createElement('div', { className: "min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden" },
+        React.createElement('link', { href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap", rel: "stylesheet" }),
+        React.createElement(Sigil),
         
-        {showPhaseTransition && (
-          <div className="absolute inset-0 z-30 flex items-center justify-center bg-black/90">
-            <h2 className="text-6xl font-bold text-center px-8" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-              {phaseText}
-            </h2>
-          </div>
-        )}
+        showPhaseTransition && React.createElement('div', { className: "absolute inset-0 z-30 flex items-center justify-center bg-black/90" },
+          React.createElement('h2', { className: "text-6xl font-bold text-center px-8", style: { fontFamily: 'Bebas Neue, sans-serif' } }, phaseText)
+        ),
 
-        <img
-          src={imageSequence[currentIndex]?.image}
-          alt="Figure reference"
-          className={`max-h-screen w-auto transition-opacity duration-600 ${fadeState === 'in' ? 'opacity-100' : 'opacity-0'}`}
-          style={{ maxWidth: '90vw', objectFit: 'contain' }}
-        />
+        React.createElement('img', {
+          src: imageSequence[currentIndex]?.image,
+          alt: "Figure reference",
+          className: `max-h-screen w-auto transition-opacity duration-600 ${fadeState === 'in' ? 'opacity-100' : 'opacity-0'}`,
+          style: { maxWidth: '90vw', objectFit: 'contain' }
+        }),
 
-        <div className="absolute top-8 right-8 bg-black/70 px-6 py-4 text-3xl font-bold" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-          {formatTime(timeRemaining)}
-        </div>
+        React.createElement('div', { className: "absolute top-8 right-8 bg-black/70 px-6 py-4 text-3xl font-bold", style: { fontFamily: 'Bebas Neue, sans-serif' } },
+          formatTime(timeRemaining)
+        ),
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-6 items-center bg-black/70 px-8 py-4 hover:opacity-100 opacity-60 transition-opacity">
-          <button
-            onClick={previousImage}
-            disabled={imageHistory.length <= 1}
-            className="text-3xl disabled:opacity-30 hover:text-red-500 transition-colors"
-            title="Previous"
-          >
-            ←
-          </button>
+        React.createElement('div', { className: "absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-6 items-center bg-black/70 px-8 py-4 hover:opacity-100 opacity-60 transition-opacity" },
+          React.createElement('button', {
+            onClick: previousImage,
+            disabled: imageHistory.length <= 1,
+            className: "text-3xl disabled:opacity-30 hover:text-red-500 transition-colors",
+            title: "Previous"
+          }, "←"),
           
-          <button
-            onClick={() => setIsPaused(!isPaused)}
-            className="text-2xl hover:text-red-500 transition-colors px-4"
-            style={{ fontFamily: 'Bebas Neue, sans-serif' }}
-          >
-            {isPaused ? 'Resume' : 'Pause'}
-          </button>
+          React.createElement('button', {
+            onClick: () => setIsPaused(!isPaused),
+            className: "text-2xl hover:text-red-500 transition-colors px-4",
+            style: { fontFamily: 'Bebas Neue, sans-serif' }
+          }, isPaused ? 'Resume' : 'Pause'),
           
-          <button
-            onClick={nextImage}
-            className="text-3xl hover:text-red-500 transition-colors"
-            title="Next"
-          >
-            →
-          </button>
+          React.createElement('button', {
+            onClick: nextImage,
+            className: "text-3xl hover:text-red-500 transition-colors",
+            title: "Next"
+          }, "→"),
           
-          <div className="text-lg mx-4 opacity-70">
-            {currentPose}/{totalPoses}
-          </div>
+          React.createElement('div', { className: "text-lg mx-4 opacity-70" }, `${currentPose}/${totalPoses}`),
           
-          <button
-            onClick={() => setScreen('welcome')}
-            className="text-2xl hover:text-red-500 transition-colors"
-            style={{ fontFamily: 'Bebas Neue, sans-serif' }}
-          >
-            End Session
-          </button>
-        </div>
-      </div>
+          React.createElement('button', {
+            onClick: () => setScreen('welcome'),
+            className: "text-2xl hover:text-red-500 transition-colors",
+            style: { fontFamily: 'Bebas Neue, sans-serif' }
+          }, "End Session")
+        )
+      )
     );
   }
 
   if (screen === 'completion') {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-        <Sigil />
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${getRandomImage()})` }}
-        />
-        <div className="relative z-10 max-w-3xl px-8 text-center">
-          <h1 className="text-9xl font-bold mb-12 leading-tight" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-            {completionMessage}
-          </h1>
+      React.createElement('div', { className: "min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden" },
+        React.createElement('link', { href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap", rel: "stylesheet" }),
+        React.createElement(Sigil),
+        React.createElement('div', {
+          className: "absolute inset-0 bg-cover bg-center opacity-20",
+          style: { backgroundImage: `url(${getRandomImage()})` }
+        }),
+        React.createElement('div', { className: "relative z-10 max-w-3xl px-8 text-center" },
+          React.createElement('h1', { className: "text-9xl font-bold mb-12 leading-tight", style: { fontFamily: 'Bebas Neue, sans-serif' } }, completionMessage),
           
-          <button
-            onClick={() => {
+          React.createElement('button', {
+            onClick: () => {
               setScreen('welcome');
               setCurrentIndex(0);
               setImageHistory([]);
-            }}
-            className="px-12 py-4 bg-red-700 hover:bg-red-600 text-white text-2xl font-bold transition-colors"
-            style={{ fontFamily: 'Bebas Neue, sans-serif' }}
-          >
-            Start Over
-          </button>
+            },
+            className: "px-12 py-4 bg-red-700 hover:bg-red-600 text-white text-2xl font-bold transition-colors",
+            style: { fontFamily: 'Bebas Neue, sans-serif' }
+          }, "Start Over"),
 
-          <div className="mt-16 text-sm opacity-70">
-            EmergentPlay on FetLife
-          </div>
-        </div>
-      </div>
+          React.createElement('div', { className: "mt-16 text-sm opacity-70" }, "EmergentPlay on FetLife")
+        )
+      )
     );
   }
 
   return null;
 }
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(DeviantGestures));
