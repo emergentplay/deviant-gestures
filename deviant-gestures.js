@@ -224,7 +224,7 @@ function DeviantGestures() {
 
   const Sigil = () => (
     React.createElement('img', {
-      src: "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/sigil.jpg",
+      src: "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/sigil.png",
       alt: "EmergentPlay Sigil",
       className: "absolute top-8 left-8 h-48 w-auto z-10"
     })
