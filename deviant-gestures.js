@@ -227,7 +227,7 @@ const Sigil = () => (
     src: "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/sigil.png",
     alt: "EmergentPlay Sigil",
     className: "absolute top-8 left-8 h-48 w-auto z-10 cursor-pointer",
-    onClick: () => window.location.href = '/'
+    onClick: () => setScreen('welcome')
   })
 );
 
