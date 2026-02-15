@@ -242,7 +242,7 @@ function DeviantGestures() {
         React.createElement('div', { className: "relative z-10 max-w-2xl px-8 text-center" },
           React.createElement('h1', { className: "text-8xl font-bold mb-4", style: { fontFamily: 'Bebas Neue, sans-serif' } }, "DEVIANT GESTURES"),
           React.createElement('h2', { className: "text-2xl mb-8", style: { fontFamily: 'Bebas Neue, sans-serif' } }, "Gestural Drawing for the Beautifully Deviant"),
-          React.createElement('p', { className: "text-lg mb-12 leading-relaxed" }, "This is a timed figure drawing tool using BDSM-themed reference images. Choose a structured 30-minute class or set your own pace. Grab your sketchbook. Obey the timer, or don't you brat."),
+          React.createElement('p', { className: "text-lg mb-12 leading-relaxed" }, "This is a timed figure drawing tool using BDSM-themed reference images. Choose a structured 30-minute class or set your own pace. Grab your sketchbook. Obey the timer (or not, you brat!)."),
           React.createElement('div', { className: "flex gap-6 justify-center mb-16" },
             React.createElement('button', {
               onClick: startClassMode,
