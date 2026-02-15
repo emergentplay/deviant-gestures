@@ -222,13 +222,14 @@ function DeviantGestures() {
     return () => clearInterval(timerRef.current);
   }, [screen, isPaused, currentIndex, showPhaseTransition]);
 
-  const Sigil = () => (
-    React.createElement('img', {
-      src: "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/sigil.png",
-      alt: "EmergentPlay Sigil",
-      className: "absolute top-8 left-8 h-48 w-auto z-10"
-    })
-  );
+const Sigil = () => (
+  React.createElement('img', {
+    src: "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/sigil.png",
+    alt: "EmergentPlay Sigil",
+    className: "absolute top-8 left-8 h-48 w-auto z-10 cursor-pointer",
+    onClick: () => window.location.href = '/'
+  })
+);
 
   if (screen === 'welcome') {
     return (
@@ -380,7 +381,8 @@ function DeviantGestures() {
             style: { fontFamily: 'Bebas Neue, sans-serif' }
           }, "Start Over"),
 
-          React.createElement('div', { className: "mt-16 text-sm opacity-70" }, "EmergentPlay on FetLife")
+React.createElement('div', { className: "mt-16 text-sm opacity-70" }, "Questions, requests, worship? Find EmergentPlay on FetLife"),
+React.createElement('div', { className: "mt-4 text-sm opacity-70" }, "Before you ask, yes these are AI images. If you don't like it, come pose for me. I would love to put you in the mix!")
         )
       )
     );
