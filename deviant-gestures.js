@@ -165,6 +165,21 @@ const IMAGE_LIBRARY = [
 "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/34.jpg",
 "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/35.jpg",
 "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/36.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/37.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/38.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/39.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/40.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/41.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/42.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/43.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/44.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/45.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/46.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/47.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/48.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/49.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/50.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/51.jpg",
 ];
 
 const COMPLETION_MESSAGES = [
