@@ -180,6 +180,16 @@ const IMAGE_LIBRARY = [
 "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/49.jpg",
 "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/50.jpg",
 "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/51.jpg",
+  "https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/51.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/52.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/53.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/54.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/55.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/56.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/57.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/58.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/59.jpg",
+"https://raw.githubusercontent.com/emergentplay/deviant-gestures/main/images/60.jpg",
 ];
 
 const COMPLETION_MESSAGES = [
