@@ -435,8 +435,8 @@ function DeviantGestures() {
             }, "Timed Practice")
           ),
           React.createElement('div', { className: "mb-6 md:mb-8 border-t border-white/30 pt-6 md:pt-8" },
-            React.createElement('h3', { className: "text-lg md:text-xl mb-3", style: { fontFamily: 'Bebas Neue, sans-serif' } }, "THE MUSE SURRENDER SERIES"),
-            React.createElement('p', { className: "text-sm md:text-base leading-relaxed" }, "Want to surrender your form to art? I'm looking for muses — all bodies, all genders, all expressions of power and submission. DM EmergentPlay on FetLife to be part of the series.")
+            React.createElement('h3', { className: "text-lg md:text-xl mb-3", style: { fontFamily: 'Bebas Neue, sans-serif' } }, "LIKE TO POSE?"),
+            React.createElement('p', { className: "text-sm md:text-base leading-relaxed" }, "Always looking for muses — all bodies, all genders, all expressions of power and submission. DM EmergentPlay on FetLife to be part of the series.")
           ),
           React.createElement('div', { className: "text-xs md:text-sm opacity-70" }, "Questions, requests, worship — find EmergentPlay on FetLife.")
         )
